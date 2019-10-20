@@ -41,6 +41,9 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem "factory_bot_rails"
+  gem 'shoulda-matchers'
+  gem 'awesome_print'
 end
 
 group :development do
