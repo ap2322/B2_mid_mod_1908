@@ -1,0 +1,11 @@
+<h1><%= @student.name %></h1>
+<ul>
+  <li><%= @student.age %></li>
+  <li>Cohort: <%= @student.cohort %></li>
+</ul>
+<h3>Instructors</h3>
+<ul>
+  <% @student.instructors.each do |instructor| %>
+    <li><%= link_to instructor.name, "/instructors/#{instructor.id}" %></li>
+  <% end %>
+</ul>

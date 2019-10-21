@@ -4,7 +4,7 @@ FactoryBot.define do
       "Instrctor Name #{i}"
     end
 
-    trait :instructor_with_students do
+    trait :with_students do
       transient do
         student_count { 15 }
       end
