@@ -1,0 +1,10 @@
+<h1>All Students</h1>
+<ul>
+  <% @students.each do |student| %>
+    <h3><%= student.name %></h3>
+    <li><%= student.cohort %></li>
+    <% student.instructors.each do |instructor| %>
+      <li>Instructor: <%= instructor.name %></li>
+    <% end %>
+  <% end %>
+</ul>
