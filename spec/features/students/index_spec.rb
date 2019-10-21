@@ -6,7 +6,7 @@ RSpec.describe "Student Index Page" do
       student1 = create(:student, :with_instructors, name: "Bob J")
       student2 = create(:student, :with_instructors, name: "Jim B")
       visit '/students'
-      save_and_open_page
+
       expect(page).to have_content("Bob J")
       expect(page).to have_content("#{student1.cohort}")
       student1.instructors.each do |instructor|
