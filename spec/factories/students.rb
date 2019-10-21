@@ -1,10 +1,8 @@
 FactoryBot.define do
   factory :student do
     cohort { 1908 }
-    age { 28 }
-    sequence :name do |i|
-      "Student Name #{i}"
-    end
+    sequence(:age, 18) { |i| i }
+    sequence :name {|i| "Student Name #{i}" }
 
     trait :with_instructors do
       transient do
